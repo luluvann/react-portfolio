@@ -7,8 +7,8 @@ function Navigation() {
   ];
 
   const titleElement = sectionsTitles.map((title) => (
-    <li>
-      <a href={`#${title.link}`}>{title.title}</a>
+    <li key={title.title}>
+      <a href={`/${title.link}`}>{title.title}</a>
     </li>
   ));
 
