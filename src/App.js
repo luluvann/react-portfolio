@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import Project from "./components/Project";
 import Footer from "./components/Footer"
 import ProjectsData from "./components/ProjectsData";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const projectsCard = ProjectsData.map((ProjectData) => (
@@ -24,9 +25,7 @@ function App() {
         <div class="projects-container">{projectsCard}</div>
       </section>
       
-      <section id="contact">
-        <h2>Contact</h2>
-      </section>
+      <ContactForm />
       <Footer />
     </div>
   );
