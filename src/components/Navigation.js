@@ -1,20 +1,22 @@
-function Navigation() {
-  const sectionsTitles = [
-    { title: "About Me", link: "about" },
-    { title: "Portfolio", link: "portfolio" },
-    { title: "Contact", link: "contact" },
-    { title: "Resume", link: "resume" },
-  ];
+function Navigation(props) {
+  const { sections = [], setCurrentSection} = props;
 
-  const titleElement = sectionsTitles.map((title) => (
-    <li key={title.title}>
-      <a href={`/${title.link}`}>{title.title}</a>
+  const sectionsLis = sections.map((section) => (
+    <li key={section.title}>
+      <button
+        onClick={() => {
+          console.log(section.title)
+          setCurrentSection(section.title);
+        }}
+      >
+        {section.title}
+      </button>
     </li>
   ));
 
   return (
     <nav>
-      <ul>{titleElement}</ul>
+      <ul>{sectionsLis}</ul>
     </nav>
   );
 }

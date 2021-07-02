@@ -1,31 +1,38 @@
+import React, { useState } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
-import Project from "./components/Project";
-import Footer from "./components/Footer"
-import ProjectsData from "./components/ProjectsData";
+import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
+import About from "./components/About";
 
 function App() {
-  const projectsCard = ProjectsData.map((ProjectData) => (
-    <Project data={ProjectData} />
-  ));
 
+
+  const [sections] = useState([
+    { title: "About Me", link: "about" },
+    { title: "Portfolio", link: "portfolio" },
+    { title: "Contact", link: "contact" },
+    { title: "Resume", link: "resume" },
+  ]);
+
+  const [currentSection, setCurrentSection] = useState(sections[0]);
+  
   return (
     <div className="App">
       <header className="App-header">
-        <Navigation />
+        <Navigation
+          sections={sections}
+          setCurrentSection={setCurrentSection}
+          currentSection={currentSection}
+        />
       </header>
 
-      <section id="about">
-        <h2>About Me</h2>
-      </section>
-
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="projects-container">{projectsCard}</div>
-      </section>
-      
-      <ContactForm />
+      {currentSection === "About Me" ? (
+        <About />
+      ) : currentSection === "Contact" ? (
+        <ContactForm />
+      ) : currentSection === "Portfolio" ? <Portfolio /> : <About />}
       <Footer />
     </div>
   );

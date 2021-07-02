@@ -1,11 +1,10 @@
 function Project(props) {
   return (
-    <div class="project-card" key={props.title}>
+    <div className="project-card" key={props.data.title}>
       <h3>
         <a href={props.data.links[1]}>{props.data.title}</a>
       </h3>
     </div>
   );
 }
-
 export default Project;
