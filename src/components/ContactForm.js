@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validateEmail } from '../utils/helpers';
+import { validateEmail } from "../utils/helpers";
 
 function ContactForm() {
   const [formState, setFormState] = useState({
@@ -7,7 +7,7 @@ function ContactForm() {
     email: "",
     message: "",
   });
- 
+
   const [errorMessage, setErrorMessage] = useState("");
   const { name, email, message } = formState;
 
@@ -70,11 +70,7 @@ function ContactForm() {
             onBlur={handleChange}
           />
         </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
+        {errorMessage && <p className="error-text">{errorMessage}</p>}
         <button data-testid="button" type="submit">
           Submit
         </button>
