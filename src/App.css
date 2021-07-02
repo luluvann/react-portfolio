@@ -54,6 +54,7 @@ nav ul li button:hover {
 
 .highlight{
   color: #64ffda;
+  text-decoration: underline;
 }
 
 section {
