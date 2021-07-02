@@ -152,4 +152,9 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding:20px 0;
+}
+
+footer h4{
+  margin: 10px;
 }

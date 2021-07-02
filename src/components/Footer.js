@@ -1,7 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 function Footer() {
     return (
      <footer>
-         Footer
+         <h4>Github</h4>
+         <h4>LinkedIn</h4>
      </footer>
     );
   }
