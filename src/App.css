@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0a192f;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,15 +41,19 @@ nav ul li button {
   color: aliceblue;
   text-decoration: none;
   cursor: pointer;
-  background-color: #282c34;
+  background-color: #0a192f;
   box-shadow: none;
   font-size: large;
   border: none;
 }
 
 nav ul li button:hover {
-  color: antiquewhite;
+  color: #64ffda;
   text-decoration: underline;
+}
+
+.highlight{
+  color: #64ffda;
 }
 
 section {
@@ -142,7 +146,7 @@ form button:hover{
 }
 
 footer {
-  background-color: #282c34;
+  background-color: #0a192f;
   display: flex;
   flex-direction: row;
   align-items: center;
