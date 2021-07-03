@@ -7,8 +7,6 @@ import ContactForm from "./components/ContactForm";
 import About from "./components/About";
 
 function App() {
-
-
   const [sections] = useState([
     { title: "About Me", link: "about" },
     { title: "Portfolio", link: "portfolio" },
@@ -17,7 +15,7 @@ function App() {
   ]);
 
   const [currentSection, setCurrentSection] = useState(sections[0]);
-  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -28,11 +26,19 @@ function App() {
         />
       </header>
 
-      {currentSection === "About Me" ? (
-        <About />
-      ) : currentSection === "Contact" ? (
-        <ContactForm />
-      ) : currentSection === "Portfolio" ? <Portfolio /> : <About />}
+      {(function () {
+        switch (currentSection) {
+          case "About Me":
+            return <About />;
+          case "Contact":
+            return <ContactForm />;
+          case "Portfolio":
+            return <Portfolio />;
+          default:
+            return <About />;
+        }
+      })()}
+
       <Footer />
     </div>
   );
