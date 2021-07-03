@@ -7,7 +7,8 @@ function Project(props) {
         <a href={props.data.links[1]}>{props.data.title}</a>
       </h3>
       <p>{props.data.description}</p>
-      <div class="links">
+      <div className="technologies">{props.data.technologies}</div>
+      <div className="links">
         <a href={props.data.links[0]}>
           <FaGithub />
         </a>
