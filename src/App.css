@@ -163,3 +163,16 @@ footer {
 footer h4{
   margin: 10px;
 }
+
+footer a{
+  color: white;
+  margin: 0 5px;
+}
+
+footer a:hover{
+  color: #64ffda; 
+}
+
+footer a:active{
+  color: #64ffda; 
+}

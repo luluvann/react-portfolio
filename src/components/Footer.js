@@ -1,10 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa"
 
 function Footer() {
     return (
      <footer>
-         <h4>Github</h4>
-         <h4>LinkedIn</h4>
+         <a href="https://github.com/"><FaGithub /></a>
+         <a href="https://www.linkedin.com/"><FaLinkedin /></a>
+         <a href="https://stackoverflow.com/"><FaStackOverflow /></a>
      </footer>
     );
   }
