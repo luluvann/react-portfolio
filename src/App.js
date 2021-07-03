@@ -8,13 +8,13 @@ import About from "./components/About";
 
 function App() {
   const [sections] = useState([
-    { title: "About Me", link: "about" },
-    { title: "Portfolio", link: "portfolio" },
-    { title: "Contact", link: "contact" },
-    { title: "Resume", link: "resume" },
+    { title: "About Me"},
+    { title: "Portfolio"},
+    { title: "Contact"},
+    { title: "Resume"},
   ]);
 
-  const [currentSection, setCurrentSection] = useState(sections[0]);
+  const [currentSection, setCurrentSection] = useState(sections[0].title);
 
   return (
     <div className="App">
