@@ -5,13 +5,14 @@ import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import About from "./components/About";
+import Resume from "./components/Resume";
 
 function App() {
   const [sections] = useState([
-    { title: "About Me"},
-    { title: "Portfolio"},
-    { title: "Contact"},
-    { title: "Resume"},
+    { title: "About Me" },
+    { title: "Portfolio" },
+    { title: "Contact" },
+    { title: "Resume" },
   ]);
 
   const [currentSection, setCurrentSection] = useState(sections[0].title);
@@ -34,6 +35,8 @@ function App() {
             return <ContactForm />;
           case "Portfolio":
             return <Portfolio />;
+          case "Resume":
+            return <Resume />;
           default:
             return <About />;
         }

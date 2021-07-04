@@ -12,7 +12,7 @@ function Project(props) {
         <a href={props.data.links[0]}>
           <FaGithub />
         </a>
-        <a href={props.data.links[0]}>
+        <a href={props.data.links[1]}>
           <FaLink />
         </a>
       </div>

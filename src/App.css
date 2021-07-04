@@ -63,9 +63,29 @@ section {
   justify-content: center;
 }
 
+section h2 {
+  color: #0a192f;
+}
+
 section h2,
 p {
   text-align: left;
+}
+
+.about-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-div p {
+  margin-left: 20px;
+  width: 300px;
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
 }
 
 .projects-container {
@@ -82,8 +102,8 @@ p {
   padding: 10px;
 }
 
-.project-card:hover{
-  background-color:#112240;
+.project-card:hover {
+  background-color: #112240;
 }
 
 .project-card h3 {
@@ -99,33 +119,42 @@ p {
 .project-card p {
   text-align: center;
   margin: auto;
-  color:#ccd6f6;
+  color: #ccd6f6;
   font-weight: 350;
 }
 
-.project-card .links{
+.project-card .links {
   padding: 10px;
 }
 
-.project-card .links a{
+.project-card .links a {
   margin: 0 5px;
-  color:#ccd6f6
+  color: #ccd6f6;
 }
 
-.project-card .technologies{
-  font-family: 'Roboto Mono', monospace;
-  color:#ccd6f6;
+.project-card .technologies {
+  font-family: "Roboto Mono", monospace;
+  color: #ccd6f6;
   margin: 10px;
 }
 
-a:hover{
+a {
+  color: #0a192f;
+  text-align: left;
+}
+
+a:hover {
   color: #64ffda;
+}
+
+a:active {
+  color: #0a192f;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 50%;
   justify-content: flex-start;
 }
 
@@ -167,10 +196,13 @@ form button {
   border-radius: 8px;
   cursor: pointer;
   border: none;
+  color: #ccd6f6;
+  font-weight: 500;
+  background-color: #0a192f;
 }
 
 form button:hover {
-  background-color: green;
+  background-color: #112240;
 }
 
 footer {
@@ -198,4 +230,11 @@ footer a {
 
 footer a:active {
   color: #64ffda;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: left;
 }
